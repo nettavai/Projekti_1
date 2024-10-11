@@ -1,0 +1,92 @@
+body {
+    
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #766dfa, #f99cac);
+    color: #170344;
+  }
+  
+  #todo-app {
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fadbff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #todo-form input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #efaef9;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+   
+  }
+  
+  #todo-form button {
+    padding: 10px 20px;
+    background-color: #8032a7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #todo-form button:hover {
+    background-color: #fc98d6;
+  }
+  
+  #todo-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #todo-list li {
+    background-color: #f9f9f9;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Painikkeiden yleiset tyylit li-elementissä */
+#todo-list li button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s;
+    font-size: 12px;
+}
+
+/* Poista-painikkeen tyylit */
+.deleteButton {
+    background-color: #f439bc; /* Punainen tausta */
+    color: white;
+}
+
+.deleteButton:hover {
+    background-color: #6d1b54; /* Tummempi punainen hover-efekti */
+}
+
+/* Muokkaa-painikkeen tyylit */
+.editButton {
+    background-color: #8032a7; /* lila tausta */
+    color: white;
+}
+
+.editButton:hover {
+    background-color: #301041; /* Tummempi lila hover-efekti */
+}
