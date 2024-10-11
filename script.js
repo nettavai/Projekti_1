@@ -7,7 +7,7 @@ todoForm.addEventListener('submit', function(event) {
     const newTask = todoInput.value.trim();
   
     if (newTask === '') {
-        alert('Et kirjoittanut mitään?');
+        alert('Et kirjoittanut mitään?'); //Herja, jos kenttään ei kirjoita mitään
         return;
     }
   
@@ -16,23 +16,23 @@ todoForm.addEventListener('submit', function(event) {
 });
 
 function addTask(task) {
-    const listItem = document.createElement('li');
-    const taskText = document.createElement('span');
+    const listItem = document.createElement('li'); // luo listaelementin
+    const taskText = document.createElement('span'); 
     taskText.textContent = task;
     listItem.appendChild(taskText);
   
     const checkBox = document.createElement('input');
-    checkBox.setAttribute('type', 'checkbox');
+    checkBox.setAttribute('type', 'checkbox');  //Lisätään check-box
     listItem.appendChild(checkBox);
   
     const deleteButton = document.createElement('button');
     deleteButton.textContent = 'Poista';
-    deleteButton.classList.add('deleteButton'); // Lisätään luokka deleteButton
+    deleteButton.classList.add('deleteButton'); // Lisätään poista-nappi
     listItem.appendChild(deleteButton);
 
     const editButton = document.createElement('button');
     editButton.textContent = 'Muokkaa';
-    editButton.classList.add('editButton'); // Lisätään luokka editButton
+    editButton.classList.add('editButton'); // Lisätään muokkaa-nappi
     listItem.appendChild(editButton);
   
     todoList.appendChild(listItem);
@@ -40,7 +40,7 @@ function addTask(task) {
     // Tapahtumankuuntelijat
     checkBox.addEventListener('change', function() {
         if (this.checked) {
-            taskText.style.textDecoration = 'line-through';
+            taskText.style.textDecoration = 'line-through'; //yliviivaa tehdyn tehtävän
         } else {
             taskText.style.textDecoration = 'none';
         }
