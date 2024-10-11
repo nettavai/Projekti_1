@@ -47,10 +47,10 @@ function addTask(task) {
     });
 
     deleteButton.addEventListener('click', function() {
-        todoList.removeChild(listItem);
+        todoList.removeChild(listItem); // klikkaus poistaa listaelementin
     });
 
-    editButton.addEventListener('click', function() {
+    editButton.addEventListener('click', function() { // Muokkaa napin painallus antaa laatikon, jossa tietoja voi muokkaa
         const newTaskText = prompt('Muokkaa tehtävää:', taskText.textContent);
         if (newTaskText !== null && newTaskText.trim() !== '') {
             taskText.textContent = newTaskText.trim();
